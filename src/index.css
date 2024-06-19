@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.nodes-panel,
+.settings-panel {
+  width: 200px;
+  background: #f3f3f3;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.flow-builder {
+  flex: 1;
+  position: relative;
+  height: calc(100vh - 80px); /* Adjust height based on the header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.save-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #21a1f1;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .nodes-panel,
+  .settings-panel {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .flow-builder {
+    height: calc(100vh - 240px); /* Adjust height based on the header and panels */
+  }
+
+  .save-button {
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+  }
+}
